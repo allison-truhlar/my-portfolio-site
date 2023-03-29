@@ -115,7 +115,7 @@ textarea {
   .heading-sec__main::after {
     content: '';
     position: absolute;
-    top: calc(100% + 1.5rem);
+    top: calc(100% + 1.2rem);
     height: 5px;
     width: 3rem;
     background: rgba(var(--main-color), 1);
@@ -335,9 +335,10 @@ textarea {
 .contact {
   background: linear-gradient(to right, rgba(var(--main-color), 0.8), rgba(var(--main-color), 0.8)), url(../../assets/svg/common-bg.svg);
   background-size: cover;
-  background-position: center; 
-}
- 
+  background-position: center; }
+  .contact__content{
+    display: flex; 
+    justify-content: space-around;}
 
 .project-cs-hero {
   color: #fff;
