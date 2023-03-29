@@ -240,7 +240,7 @@ textarea {
     display: block;
     padding: 1.2rem;
     border-bottom: 2px solid #eee;
-    transition: background .3s; }
+    transition: background-color .3s; }
     .home-hero__social-icon-link:hover {
       background: rgba(255, 255, 255, 0.1); }
     .home-hero__social-icon-link--bd-none {
@@ -270,14 +270,6 @@ textarea {
 .about {
   background: #fafafa; 
   text-align: center;}
-  /* .about__content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10rem; } */
-    /* @media only screen and (max-width: 56.25em) {
-      .about__content {
-        grid-template-columns: 1fr;
-        grid-gap: 8rem; } } */
     .about__content-skills {
       margin-bottom: 3rem; }
     .about__content-title {
@@ -287,17 +279,7 @@ textarea {
       @media only screen and (max-width: 37.5em) {
         .about__content-title {
           font-size: 2.4rem; } }
-    /* .about__content-details-para {
-      font-size: 1.8rem;
-      color: grey;
-      max-width: 60rem;
-      line-height: 1.7;
-      margin-bottom: 1rem; }
-      .about__content-details-para--hl {
-        font-weight: 700;
-        margin: 0 3px; }
-      .about__content-details-para:last-child {
-        margin-bottom: 4rem; } */
+
 
 .projects__row {
   display: grid;
@@ -349,17 +331,6 @@ textarea {
             margin: 0 0; }
     .projects__row-content-links-btn:first-child {
       margin-right: 1rem; }
-        /* @media only screen and (max-width: 37.5em) {
-          .projects__row-content-links-btn {
-            /* margin-right: 0; */
-            /* width: 70%; */
-            /* margin-bottom: 2rem; */
-            /* justify-content: center; } } */ */
-        /* .projects__row-content-links-btn:last-child {
-          margin: 0; }
-            @media only screen and (max-width: 37.5em) {
-              .projects__row-content-links-btn:last-child {
-              margin: 0; } } */
 
 .contact {
   background: linear-gradient(to right, rgba(var(--main-color), 0.8), rgba(var(--main-color), 0.8)), url(../../assets/svg/common-bg.svg);
