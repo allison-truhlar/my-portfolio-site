@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Allison Truhlar's Portfolio</title>
+    <meta name="description" content="Allison Truhlar's Portfolio" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/img/Allison-avatar.jpg"
+              alt="Image of a woman with glasses"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Allison Truhlar</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link">About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link">
+                Projects
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#contact" class="header__link"> Contact </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projects </a>
+            </li>
+            
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> About </a>
+            </li>
+            
+            <li class="header__sm-menu-link">
+              <a href="./index.html#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+
+    <section class="home-hero">
+      <div class="home-hero__content">
+        <h1 class="heading-primary">Chingu Voyage Experience</h1>
+        <div class="project-cs-hero__info">
+          <p class="text-primary">
+            Over 6 one-week sprints, I am collaborating in a team of 6 front end developers to develop an app to visualize NASA meteorite strike data.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="project-details">
+      <div class="main-container">
+        <div class="project-details__content">
+          <div class="project-details__showcase-img-cont">
+            <img
+              src="./assets/img/detail-data-screenshot.jpg"
+              alt="Project Image"
+              class="project-details__showcase-img"
+            />
+          </div>
+          <div class="project-details__content-main">
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Experience Overview</h3>
+              <p class="project-details__desc-para">
+                <a href="https://www.chingu.io/" target="_blank">Chingu</a> is a volunteer-run organization that provides free collaborative learning experiences to aspiring software developers. I was placed in a team of 6 front end developers and challenged to build and deploy our MVP over the course of 6 one-week sprints.
+              </p>
+              <p class="project-details__desc-para">
+                I was particularly excited about the topic of our app - accessing, searching, and displaying meteorite strike data. With my background in environmental engineering, I have experience working with geospatial data in R and ArcGIS - I was excited to explore tools for this in JavaScript.
+              </p>
+              <p class="project-details__desc-para">
+                I was responsible for a data table display component with one other teammate. The table displays one row of data for each meteorite strike returned by the user's search requirements, handled in another component. My personal focus was identifying an efficient method to reverse geocode latitude and longitude data for each meteorite strike.
+              </p>
+
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Tools Used</h3>
+              <div class="skills">
+                <div class="skills__skill">CSS</div>
+                <div class="skills__skill">JavaScript</div>
+                <div class="skills__skill">React</div>
+                <div class="skills__skill">GIT</div>
+              </div>
+            </div>
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Challenges and Lessons Learned</h3>
+              <p class="project-details__desc-para">
+                <strong>Optimizing performance:</strong> I quickly discovered that reverse geocoding is a relatively time intensive task. This resulted in a poor user experience - specifically, the detailed data table populated several seconds after the rest of the app components. Utlimately, I was able to solve this issue by using a different API for reverse geocoding. 
+              </p>
+              <p class="project-details__desc-para">
+                The alternate reverse geocoding API I tried had a higher rate-limit for requests which resulted in a barely noticeable loading time for the locations. However, the tradeoff was that the location provided in the response was less granual - for example, you might only receive state-level information as opposed to city-level. After discussion with my team, we decided this tradeoff was acceptable. We prioritized user experience of viewing the data quickly because the app is purely for informational purposes - the user would not rely on the location data for navigation or another similar purpose.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>Using GIT:</strong> This was my first experience working in a team to create an app, and therefore was my first experience with practical use of GIT for version management.
+              </p>
+            </div>
+            <div class="project-details__links">
+              <h3 class="project-details__content-title">View Project</h3>
+              <a
+                href="https://github.com/chingu-voyages/v45-tier2-team-26"
+                class="btn btn--med btn--theme-inv project-details__links-btn"
+                target="_blank"
+                >Source Code</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__lower">
+          Built by Allison Truhlar | 2023
+        </div>
+      </div>
+    </footer>
+    
+    <script src="./index.js"></script>
+  </body>
+</html>
