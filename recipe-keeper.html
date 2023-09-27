@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Allison Truhlar's Portfolio</title>
+    <meta name="description" content="Allison Truhlar's Portfolio" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/img/Allison-avatar.jpg"
+              alt="Image of a woman with glasses"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Allison Truhlar</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link">About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link">
+                Projects
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#contact" class="header__link"> Contact </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projects </a>
+            </li>
+            
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> About </a>
+            </li>
+            
+            <li class="header__sm-menu-link">
+              <a href="./index.html#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+
+    <section class="home-hero">
+      <div class="home-hero__content">
+        <h1 class="heading-primary">Recipe Keeper</h1>
+        <div class="project-cs-hero__info">
+          <p class="text-primary">
+            My recipe keeper app allows the user to populate and save recipe cards by either providing a URL or manually inputting recipe information.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="project-details">
+      <div class="main-container">
+        <div class="project-details__content">
+          <div class="project-details__showcase-img-cont">
+            <img
+              src="./assets/img/Recipe-Card.png"
+              alt="Project Image"
+              class="project-details__showcase-img"
+            />
+          </div>
+          <div class="project-details__content-main">
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Project Overview</h3>
+              <p class="project-details__desc-para">
+                I cook almost every day for my family. I have a lot of online recipes bookmarked and some favorite recipes I refer to from cookbooks or pieces of paper. I often wish I could search all these recipes by ingredient and access them all easily from one convenient place.
+              </p>
+              <p class="project-details__desc-para">
+              <strong>Problem Statement:</strong> As a home cook, I need to be able to easily search all my favorite recipes in one place, to find recipes that use a specific ingredient. 
+              </p>
+              </p>
+              <p class="project-details__desc-para">
+                <strong>Use Cases:</strong><br> 
+                1.	The user can manually save and delete recipes from a collection.<br>
+                2.	The user can import online recipes that utilize the standard Recipe Schema and have the recipe name, URL, ingredients, and instructions automatically parsed and saved by the app.<br>
+                3.	The user can view recipes in-app, and link out to the original recipe.<br>
+                4.	In progress: The user can search their recipe collection by ingredient(s).
+              </p>
+            </div>
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Tools Used</h3>
+              <div class="skills">
+                <div class="skills__skill">CSS</div>
+                <div class="skills__skill">JavaScript</div>
+                <div class="skills__skill">React</div>
+                <div class="skills__skill">NodeJS</div>
+                <div class="skills__skill">Express</div>
+              </div>
+            </div>
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Challenges and Lessons Learned</h3>
+              <p class="project-details__desc-para">
+                <strong>Parsing recipe data:</strong> This was the primary functionality I wanted for my app: for the user to be able to input a URL, and have the recipe name, ingredients, and instructions parsed and automatically populated into the app.
+              </p> 
+              <p class="project-details__desc-para">
+                The way I went about solving this was by leveraging the standard Recipe Schema Markup adopted by Google. I learned that search engines utilize schema markup, or structured data, provided by websites to provide additional useful informaiton to users. For example, when you search for a recipe on Google, you will often see suggested recipe cards appear at the top of the results page. These cards contain some abbreviated information about each recipe - e.g., a picture, title, cooking time, and ingredients. These data come from the Recipe Schema Markup for each recipe.
+              </p>
+              <p class="project-details__desc-para">
+                I accessed the Recipe Schema Markup through two steps: first, using Axios to fetch the HTML document for the URL provided by the user. Then, I used a package called Cheerio to parse the document, returning only the Recipe Schema Markup, which is contaned within a script tag of type="application/ld+json". JSON-LD is the format for schema markup preferred by Google.
+              </p>
+              <p class="project-details__desc-para">
+                Once I extracted the Recipe Schema Markup from the HTML document, since the format is JSON-LD, I could parse it with JSON.parse() and then access the data as I would for any other JSON data. I first found the object that contained the recipe data I was interested in, and then used key names to access the values of different properties (e.g., ingredients, instructions) in the object. These data could then be added to the app database as a recipe, just like the manually inputted recipe data.
+              </p>
+            </div>
+            <div class="project-details__links">
+              <h3 class="project-details__content-title">View Project</h3>
+              <a
+                href="https://recipe-keeper-app.netlify.app"
+                class="btn btn--med btn--theme-inv project-details__links-btn"
+                target="_blank"
+                >Live App</a
+              >
+              <a
+                href="https://github.com/allison-truhlar/recipe-app"
+                class="btn btn--med btn--theme-inv project-details__links-btn"
+                target="_blank"
+                >Source Code</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__lower">
+          Built by Allison Truhlar | 2023
+        </div>
+      </div>
+    </footer>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
