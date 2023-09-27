@@ -355,11 +355,10 @@ textarea {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 5px;
+  box-shadow: -5px -5px 10px rgba(0,0,0,0.05), 5px 5px 10px rgba(0,0,0,0.05);
 }
 
-.projects__img-border {
-  border: 2px solid #333;
-}
 
 .projects__row-content {
   padding: 2rem 0;
@@ -483,6 +482,8 @@ textarea {
 
 .project-details__showcase-img {
   width: 75%;
+  border-radius: 5px;
+  box-shadow: -5px -5px 10px rgba(0,0,0,0.05), 5px 5px 10px rgba(0,0,0,0.05);
 }
 
 .project-details__content-main {
