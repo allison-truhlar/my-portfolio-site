@@ -15,15 +15,9 @@ Inside media queries 1em is always 16px i.e 1em = 16px at every screen size only
 */
 
 * {
-  --n-blue: 0, 98, 185;
-  --blue: rgba(0, 98, 185, 0.8);
-  --red: red;
-  --purple: rgba(143, 162, 255, 0.8);
-  --green: rgba(31, 79, 45, 0.8);
-  --light-green: rgba(101, 146, 74, 0.8);
-  --brown: rgba(129, 104, 8, 0.8);
-  --light-brown: rgba(186, 155, 65, 0.8);
-  --main-color: var(--n-blue);
+  --color: 3, 84, 73;
+  /* --dark-purple: 67, 48, 151; */
+  --main-color: var(--color);
 }
 
 *,
@@ -319,7 +313,7 @@ textarea {
 
 .about__content-details-para {
   font-size: 1.8rem;
-  color: grey;
+  color: #545454;
   max-width: 60rem;
   line-height: 1.7;
   margin-bottom: 1rem; }
@@ -384,7 +378,7 @@ textarea {
 
 .projects__row-content-desc {
   font-size: 1.8rem;
-  color: grey;
+  color: #545454;
   max-width: 60rem;
   line-height: 1.7;
   margin-bottom: 3rem;
@@ -499,7 +493,7 @@ textarea {
 .project-details__desc-para {
   font-size: 1.8rem;
   line-height: 1.7;
-  color: grey;
+  color: #545454;
   margin-bottom: 2rem;
 }
 
@@ -575,13 +569,7 @@ textarea {
 .header__logo-container {
   display: flex;
   align-items: center;
-  cursor: pointer;
   color: #333;
-  transition: color .3s;
-}
-
-.header__logo-container:hover {
-  color: rgba(var(--main-color), 1);
 }
 
 .header__logo-img-cont {
@@ -635,6 +623,7 @@ textarea {
   letter-spacing: 1px;
   font-weight: 700;
   transition: color .3s;
+  cursor: pointer;
 }
 
 .header__link:hover {
@@ -816,10 +805,10 @@ textarea {
   margin-bottom: 1.5rem;
   margin-right: 1.5rem;
   font-size: 1.6rem;
-  background: rgba(153, 153, 153, 0.2);
+  background: #e7e7e7;
   border-radius: 5px;
   font-weight: 600;
-  color: #777;
+  color: #4A4A4A;
 }
 
 .mouse {
