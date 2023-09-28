@@ -35,10 +35,3 @@ for (let i = 0; i < headerSmallMenuLinks.length; i++) {
     headerHamMenuCloseBtn.classList.add('d-none')
   })
 }
-
-// ---
-const headerLogoConatiner = document.querySelector('.header__logo-container')
-
-headerLogoConatiner.addEventListener('click', () => {
-  location.href = 'index.html'
-})
